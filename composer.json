@@ -9,7 +9,7 @@
             "email": "romashkov.studio@gmail.com"
         }
     ],
-    "homepage": "https://github.com/DisWEBru/laravel-kafka-tools",
+    "homepage": "https://github.com/DisWEBru/laravel-rabbitmq",
     "require": {
         "php": ">=8.2",
         "vladimir-yuldashev/laravel-queue-rabbitmq": "^14.2"

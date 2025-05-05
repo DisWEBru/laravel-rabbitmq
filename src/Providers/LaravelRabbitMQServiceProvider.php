@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace DisWEB\LaravelRabbitMQ\Providers;
+namespace Diswebru\LaravelRabbitMQ\Providers;
 
 use Diswebru\LaravelRabbitMQ\Interfaces\PublishInterface;
 use Diswebru\LaravelRabbitMQ\Publish;
