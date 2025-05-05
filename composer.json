@@ -22,7 +22,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "DisWEB\\LaravelRabbitMQ\\Providers\\LaravelRabbitMQServiceProvider"
+                "Diswebru\\LaravelRabbitMQ\\Providers\\LaravelRabbitMQServiceProvider"
             ]
         }
     }
