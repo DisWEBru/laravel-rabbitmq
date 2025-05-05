@@ -1,0 +1,29 @@
+{
+    "name": "diswebru/laravel-rabbitmq",
+    "license": "MIT",
+    "description": "tools for vladimir-yuldashev/laravel-queue-rabbitmq",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Denis Romashkov",
+            "email": "romashkov.studio@gmail.com"
+        }
+    ],
+    "homepage": "https://github.com/DisWEBru/laravel-kafka-tools",
+    "require": {
+        "php": ">=8.2",
+        "vladimir-yuldashev/laravel-queue-rabbitmq": "^14.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Diswebru\\LaravelRabbitMQ\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DisWEB\\LaravelRabbitMQ\\Providers\\LaravelRabbitMQServiceProvider"
+            ]
+        }
+    }
+}
