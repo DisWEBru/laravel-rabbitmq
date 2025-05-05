@@ -2,6 +2,7 @@
 
 namespace Diswebru\LaravelRabbitMQ\Providers;
 
+use Illuminate\Support\ServiceProvider;
 use Diswebru\LaravelRabbitMQ\Interfaces\PublishInterface;
 use Diswebru\LaravelRabbitMQ\Publish;
 use Diswebru\LaravelRabbitMQ\Interfaces\ConsumerInterface;
