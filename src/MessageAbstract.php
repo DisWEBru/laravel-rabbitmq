@@ -43,7 +43,13 @@ abstract class MessageAbstract implements MessageAbstractInterface
 
         $this->channel = $this->connection->channel();
 
-        $this->channel->exchange_declare("app.topic.{$this->topicName}", 'topic', false, true, false);
+        $this->channel->exchange_declare(
+            "app.topic.{$this->topicName}",
+            'topic',
+            false,
+            true,
+            false
+        );
     }
 
     protected function sslOptions(): array

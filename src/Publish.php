@@ -13,7 +13,11 @@ class Publish extends MessageAbstract implements PublishInterface
 
         $msg = new AMQPMessage(json_encode($message), ['content_type' => 'application/json']);
 
-        $this->channel->basic_publish($msg, "app.topic.{$this->topicName}");
+        $this->channel->basic_publish(
+            $msg,
+            "app.topic.{$this->topicName}",
+            "service.{$this->topicName}.*"
+        );
 
         $this->channel->close();
         $this->connection->close();
