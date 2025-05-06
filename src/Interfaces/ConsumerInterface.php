@@ -6,5 +6,5 @@ use Closure;
 
 interface ConsumerInterface
 {
-    public function start(Closure $handler): void;
+    public function run(Closure $handler): void;
 }
