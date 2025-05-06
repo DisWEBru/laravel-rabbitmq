@@ -29,7 +29,7 @@ Sending a message to the test topic
 ```php
 use Diswebru\LaravelRabbitMQ\Publish;
 
-(new Publish)->topic('test')->sent(['message-key' => 'message-value']);
+Publish::setTopic('test')->sent(['message-key' => 'message-value']);
 ```
 
 Retrieve unprocessed messages from the test topic
@@ -38,10 +38,10 @@ Retrieve unprocessed messages from the test topic
 use Diswebru\LaravelRabbitMQ\Consumer;
 use Diswebru\LaravelRabbitMQ\AMQPMessage;
 
-Consumer::start('test', function (AMQPMessage $message) {
+Consumer::setTopic('test')->run(function (AMQPMessage $message) {
     $data = $message->getJson();
 
-    if (!isset($data['message-key']) && $data['message-key'] != 'message-value') {
+    if (!isset($data['message-key']) || $data['message-key'] != 'message-value') {
         // There will be no commit
         throw new \Exception('Error message');
     }

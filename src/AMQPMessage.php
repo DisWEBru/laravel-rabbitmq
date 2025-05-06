@@ -10,4 +10,13 @@ class AMQPMessage extends BaseAMQPMessage
     {
         return json_decode($this->body, true);
     }
+
+    public static function fromBaseMessage(BaseAMQPMessage $base): self
+    {
+        $msg = new self($base->getBody(), $base->get_properties());
+
+        $msg->delivery_info = $base->delivery_info;
+
+        return $msg;
+    }
 }

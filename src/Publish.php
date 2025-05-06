@@ -18,4 +18,9 @@ class Publish extends MessageAbstract implements PublishInterface
         $this->channel->close();
         $this->connection->close();
     }
+
+    public static function setTopic(string $name): self
+    {
+        return (new self())->topic($name);
+    }
 }
